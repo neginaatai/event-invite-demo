@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Invitation Demo (Static)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>AI Invitation Demo <span class="badge">static</span></h1>
+    <p class="sub">No backend. This page simulates your model so recruiters can try it instantly.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <form id="inviteForm" class="grid">
+        <div class="field">
+          <label for="eventType">Event Type</label>
+          <select id="eventType" required>
+            <option value="Birthday">Birthday</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Graduation">Graduation</option>
+            <option value="Baby Shower">Baby Shower</option>
+            <option value="Bridal Shower">Bridal Shower</option>
+            <option value="Engagement">Engagement</option>
+            <option value="Friends Gathering">Friends Gathering</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="mood">Mood</label>
+          <select id="mood" required>
+            <option value="Elegant">Elegant</option>
+            <option value="Whimsical">Whimsical</option>
+            <option value="Romantic">Romantic</option>
+            <option value="Fun">Fun</option>
+            <option value="Vintage">Vintage</option>
+            <option value="Spring">Spring</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="season">Season</label>
+          <select id="season" required>
+            <option value="Any">Any</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Fall">Fall</option>
+            <option value="Winter">Winter</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="name">Host/Name</label>
+          <input id="name" type="text" placeholder="e.g., Negina" required />
+        </div>
+
+        <div class="field">
+          <label for="date">Date</label>
+          <input id="date" type="date" required />
+        </div>
+
+        <div class="field">
+          <label for="location">Location</label>
+          <input id="location" type="text" placeholder="City or venue" required />
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="generateBtn">Generate Invitation</button>
+          <button type="button" id="sampleBtn" class="ghost">Try a Sample</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="resultCard" class="card hidden">
+      <h2>Recommended Template</h2>
+      <div id="templateTag" class="tag">—</div>
+      <div id="preview" class="preview">
+        <div class="preview-title">Design Preview</div>
+        <div class="preview-body">Colors & layout reflect the suggested style.</div>
+      </div>
+
+      <h3>Your Invitation Text</h3>
+      <div class="output-wrap">
+        <pre id="output" class="output"></pre>
+        <div id="cursor" class="cursor hidden"></div>
+      </div>
+
+      <div class="result-actions">
+        <button id="copyBtn">Copy Text</button>
+        <button id="downloadBtn" class="ghost">Download .txt</button>
+      </div>
+
+      <p class="note">This is a static approximation of your model. Replace the
+        sample mappings in <code>script.js</code> with real outputs later.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Made for a quick recruiter-friendly demo. No server required.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
